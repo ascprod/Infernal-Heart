@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#100d18" />
+    <link rel="icon" href="data:," />
+    <title>Infernal Heart — Prototype</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <noscript>This game needs JavaScript enabled in Safari.</noscript
+    ><canvas id="game" aria-label="Infernal Heart game arena"></canvas>
+    <div id="hud">
+      <div id="bars">
+        <div>❤️ <span id="hptext"></span></div>
+        <div class="bar"><div id="hp" class="fill"></div></div>
+        <div>✦ Level <span id="level"></span> · XP</div>
+        <div class="bar"><div id="xp" class="fill"></div></div>
+      </div>
+      <div id="stats">
+        <span id="kills"></span><span id="time"></span><span id="burn"></span>
+      </div>
+      <div class="small">
+        Infernal Heart reserves 25% life · Hold NOVA to charge
+      </div>
+    </div>
+    <div id="controls">
+      <div id="stick" role="group" aria-label="Movement joystick">
+        <div id="knob"></div>
+      </div>
+      <button type="button" id="dash">DASH</button
+      ><button type="button" id="nova">FIRE<br />NOVA</button>
+      <div id="charge"><div id="chargefill"></div></div>
+    </div>
+    <div id="overlay">
+      <div id="panel">
+        <h1>🔥 Infernal Heart</h1>
+        <p>
+          Move through monsters with your permanent burning aura. Hold
+          <b>FIRE NOVA</b> to charge a devastating ignite, then release. Ignites
+          spread to nearby enemies. Dash to survive.
+        </p>
+        <p class="small">
+          Left thumb: move · Right thumb: charge nova / dash · Desktop: WASD,
+          Space (hold/release), Shift
+        </p>
+        <div id="choices">
+          <button type="button" class="start" id="start">ENTER THE RIFT</button>
+        </div>
+      </div>
+    </div>
+    <aside id="dev-status" hidden aria-live="off"></aside>
+    <aside id="error-report" role="alert" hidden>
+      <strong>Game error</strong>
+      <pre id="error-details"></pre>
+      <button type="button" id="error-reload">RELOAD GAME</button>
+    </aside>
+    <script src="./diagnostics.js"></script>
+    <script src="./game.js"></script>
+  </body>
+</html>
